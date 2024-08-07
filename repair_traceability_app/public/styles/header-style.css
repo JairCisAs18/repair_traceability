@@ -1,0 +1,39 @@
+.container-sm{
+    background-color: lightgray;
+    border-color: #005BAC!important;
+}
+
+.header{
+    height: 10vh;
+}
+
+.menu{
+    height: 6vh;
+    background-color: rgb(224, 224, 224);
+}
+
+img{
+    width: 25%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
+
+.col-4:first-child:hover{
+    background-color: #005BAC;
+}
+
+.col-4:nth-child(2):hover{
+    background-color: red;
+}
+
+.col-4:last-child:hover{
+    background-color: green;
+}

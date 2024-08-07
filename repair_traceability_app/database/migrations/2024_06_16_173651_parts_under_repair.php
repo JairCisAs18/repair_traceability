@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('parts_to_repair', function (Blueprint $table){
+        Schema::create('PARTS_TO_REPAIR', function (Blueprint $table){
             $table->id();
             $table->foreignId('RNO_ID')->constraint('models');
-            $table->string('SNA'); 
-            $table->string('INIT_DATE')->nullable();
-            $table->string('END_DATE')->nullable();
-            $table->boolean('IN_PROCESS')->default(0);
+            $table->foreignId('PROCESS')->constraint('processes');
+            $table->string('SNA', 20); 
+            $table->string('INIT_DATE', 10);
+            $table->string('INIT_TIME', 10);
+            $table->string('END_DATE', 10)->nullable();
+            $table->string('END_TIME', 10)->nullable();
             $table->boolean('REPAIRED')->default(0);
             $table->boolean('SCRAP')->default(0);
-            $table->timestamps();
         });
     }
 

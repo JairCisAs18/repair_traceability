@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PartsController::class, 'readParts']);
 Route::post('/addPart', [PartsController::class, 'addPart']);
+Route::get('/scrap-parts', [PartsController::class, 'readScrapParts']);
+Route::get('/repaired-parts', [PartsController::class, 'readRepairedParts']);
+Route::post('/add-scrap', [PartsController::class, 'addToScrap']);
+Route::post('/add-repaired', [PartsController::class, 'addToRepaired']);
 
 Route::get('/check-connection', function(){
     return view('checkDB');
